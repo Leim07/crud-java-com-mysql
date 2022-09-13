@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+E:\Projetos\Java\CRUD EM JAVA COM MYSQL\.metadata\.plugins\org.eclipse.jdt.core
+19548662.index
+708953903.index
+1865797976.index
+3011209426.index

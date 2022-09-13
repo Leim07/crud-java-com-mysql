@@ -1,0 +1,42 @@
+package br.com.agenda.aplicacao;
+
+import java.util.Date;
+
+import br.com.agenda.dao.ContatoDAO;
+import br.com.agenda.model.Contato;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		ContatoDAO contatoDao = new ContatoDAO();
+		
+		Contato contato = new Contato();		
+		contato.setNome("Nalva Sogrinha");
+		contato.setIdade(53);
+		contato.setDataCadastro(new Date());
+		
+		contatoDao.save(contato);
+		
+		//Atualizar o contato
+		Contato ca = new Contato();
+		ca.setNome("Karolzinha ");
+		ca.setIdade(22);
+		ca.setDataCadastro(new Date());
+		ca.setId(1);
+		
+		//contatoDao.update(ca);
+		
+		//deletar o contato pelo ID
+		//contatoDao.deleteByID(4);
+		
+		//visualização dos registros do banco de dados
+		
+		for(Contato c: contatoDao.getContatos()) {
+			System.out.println("Contato: " + c.getNome());
+		}
+			
+		
+	}
+
+}

@@ -1,0 +1,29 @@
+package br.com.agenda.factory;
+
+import java.sql.Connection;
+
+public class ConnectionFactory {
+	
+	//Nome do usuario do mysql
+	private static final String USERNAME = "root";
+	
+	//senha do banco
+	private static final String PASSWORD = "";
+	
+	//caminho do banco de dados, porta
+	private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/agenda";
+	
+	/*
+	 * Conexão com o banco de dados
+	 */
+	
+	public static Connection createConnectionToMySQL() {
+		//Faz com que a classe seja carregada pela JBVM
+		Class.forName(com.mysql.jdbc.Driver);
+		
+		Connection connection = DriveManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
+		
+		
+	}
+
+}
